@@ -1,0 +1,25 @@
+\input{preamble.tex}
+\makeatletter
+\def\@settitle{\begin{center}%
+  \baselineskip14\p@\relax
+    %\bfseries
+    \normalfont\Large%<- NEW
+\@title
+  \end{center}%
+}
+\makeatother
+
+\title{Ramsey's Theorem and Applications to Analysis}
+\author{Jake R. Gameroff}
+\usepackage{hyperref}
+\begin{document}
+\begin{abstract}
+This document contains the notes for my talk on June 12, 2024 on Ramsey Theory. We will explore some classical results from the theory and use them to prove the famous Bolzano-Weierstrass theorem.
+\end{abstract}
+\maketitle
+\input{sections/introduction.tex}
+\input{sections/meat.tex}
+\input{sections/conclusion.tex}
+\bibliographystyle{plain}
+\bibliography{ref.bib} 
+\end{document}
