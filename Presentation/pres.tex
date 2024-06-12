@@ -16,11 +16,11 @@
 	\item The big picture of Ramsey Theory
 	\item Classical examples
 		\begin{itemize}
-			\item Diagonal Ramsey number + \( R(3)=6 \) 
+			\item Diagonal Ramsey number \& \( R(3)=6 \) 
 			\item Van der Waerden numbers
 		\end{itemize}
 	\item Ramsey's theorem (infinite version)
-	\item A \emph{very elegant} application of Ramsey's theorem to analysis
+	\item A {\color{cyan}{{\emph{super elegant}}}} application of Ramsey's theorem to analysis
 \end{itemize}
 \end{frame}
 
@@ -52,7 +52,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{$K_5$ with No Monochrome $K_3$}
+    \frametitle{$K_5$ with No Monochrome $K_3 \Leftrightarrow R(3) \geq 6$}
     \begin{figure}
         \centering
         \begin{tikzpicture}[scale=2.5]
@@ -80,7 +80,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{\( R(3) = 6 \)}
+	\frametitle{\( R(3) \leq 6 \)}
     \begin{figure}
         \centering
         \begin{tikzpicture}[scale=2]
@@ -109,7 +109,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{\( R(3) = 6 \)}
+	\frametitle{\( R(3) \leq 6 \)}
     \begin{figure}
         \centering
         \begin{tikzpicture}[scale=2]
@@ -139,7 +139,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{\( R(3) = 6 \)}
+	\frametitle{\( R(3) \leq 6 \)}
     \begin{figure}
         \centering
         \begin{tikzpicture}[scale=2]
@@ -168,7 +168,7 @@
     \end{figure}
 \end{frame}
 \begin{frame}
-	\frametitle{\( R(3) = 6 \)}
+	\frametitle{\( R(3) \leq 6 \)}
     \begin{figure}
         \centering
         \begin{tikzpicture}[scale=2]
@@ -198,7 +198,7 @@
 \end{frame}
 
 \begin{frame}
-	\frametitle{\( R(3) = 6 \)}
+	\frametitle{\( R(3) \leq 6 \)}
     \begin{figure}
         \centering
         \begin{tikzpicture}[scale=2]
@@ -225,15 +225,34 @@
             \draw[red, line width=2.5pt](v5) -- (v6);
         \end{tikzpicture}
     \end{figure}
+Therefore \( R(3) \geq 6 \) and \( R(3) \leq 6 \Leftrightarrow R(3) = 6. \qed \)
 \end{frame}
 
 \begin{frame}
-	\frametitle{Van der Waerden Numbers} For \( r, k \in \mathbb{N} \), the \textbf{Van der Waerden number} \( W(k,r) \) is the smallest integer \( N \) such that in any coloring of \( [n] \) in \( k \) colors there is a set of \( r \) monochromatic integers in arithmetic progression.
+	\frametitle{Van der Waerden Numbers} For \( r, k \in \mathbb{N} \), the \textbf{Van der Waerden number} \( W(k,r) \) is the smallest integer \( N \) such that in any coloring of \( [N] \) in \( k \) colors there is a set of \( r \) monochromatic integers in arithmetic progression.
 \begin{itemize}
 	\item \emph{Van der Waerden's Theorem:} \( W(k,r) \) exists for all positive integers \( r,k\).
-	\item Positive integers \( a_1, a_2, \hdots , a_{r}  \) are in \textbf{arithmetic progression} if there is an integer \( d \geq 0 \) such that the difference of consecutive terms is \( d \); that is, for \( 1 \leq k \leq n - 1 \), \[ a_{k+1} - a_{k} = d. \]
+	\item Positive integers \( a_1, a_2, \hdots , a_{r}  \) are in \textbf{arithmetic progression} if there is an integer \( d \geq 0 \) such that the difference of consecutive terms is \( d \); that is, for \( 1 \leq k \leq r - 1 \), \[ a_{k+1} - a_{k} = d. \]
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+\frametitle{W(2,3) = 9}
+\begin{center}
+	\Huge {\color{orange}{1}}    {\color{cyan}{2}} {\color{orange}{3}}    {\color{orange}{4}}   {\color{cyan}{5}}    {\color{orange}{6}}   {\color{cyan}{7}}    {\color{orange}{8}}    {\color{cyan}{9}}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{W(2,3) = 9}
+\begin{center}
+	\Huge {\color{orange}{1}}    {\color{cyan}{2}} {\color{orange}{3}}    {\color{orange}{4}}   {\color{cyan}{5}}    {\color{orange}{6}}   {\color{cyan}{7}}    {\color{orange}{8}}    {\color{cyan}{9}}
+\end{center}
+$ $\newline
+
+Then \( {\color{orange}{\{ 4, 6, 8 \}}} \) is a monochromatic arithmetic progression of length 3 with \( d = 2 \).
+\end{frame}
+
 
 \begin{frame}
 \begin{center}
@@ -258,7 +277,7 @@ Set \( A_0 = \mathbb{N}  \), fix \( x_0 \in A_0 \). By Pigeonhole, \( \exists c_
 	\item \( A_{k+1} \subseteq A_{k}  \),
 	\item \( \forall x \in A_{k+1} : \{ x_{k} , x \}  \) has color \( c_{k}  \).
 \end{enumerate}
-Let \( c \in  \{ {\color{red}{\mbox{red}}}, {\color{blue}{\mbox{blue}}} \}  \) be such that \( c = c_{k}  \) for infinitely many \( k \). Then \( A = \{ x_{k} : c_{k} = c \}  \) edges only with color \( c \).
+Let \( c \in  \{ {\color{red}{\mbox{red}}}, {\color{blue}{\mbox{blue}}} \}  \) be such that \( c = c_{k}  \) for infinitely many \( k \). Then \( A = \{ x_{k} : c_{k} = c \}  \) has edges only with color \( c \).
 \end{proof}
 \end{frame}
 
@@ -267,12 +286,12 @@ Let \( c \in  \{ {\color{red}{\mbox{red}}}, {\color{blue}{\mbox{blue}}} \}  \) b
         \centering
         \begin{minipage}{0.48\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{/Users/jakeg/Desktop/RamseyTalk/Presentation/images/1.png}
+            \includegraphics[width=\textwidth]{/Users/jakeg/Desktop/RamseyTalk24/Presentation/images/1.png}
         \end{minipage}
         \hfill
         \begin{minipage}{0.48\textwidth}
             \centering
-            \includegraphics[width=\textwidth]{/Users/jakeg/Desktop/RamseyTalk/Presentation/images/2.png}
+            \includegraphics[width=\textwidth]{/Users/jakeg/Desktop/RamseyTalk24/Presentation/images/2.png}
         \end{minipage}
     \end{figure}
 \end{frame}
@@ -306,7 +325,7 @@ From the lemma, \( (x_{n}) \) has a monotone subsequence which is bounded as \( 
 	\frametitle{Acknowledgements}
 
 \begin{itemize}
-	\item I would like to give my most sincere thanks Professor Jakobson for his kindness in helping me prepare this presentation. 
+	\item I would like to give my sincere thanks to Professor Jakobson for giving me the opportunity to give this talk.
 	\item I also dearly thank Professor Anush Tserunyan for teaching me about this clever combinatorial proof of the BW theorem. I learnt this during my first semester in one of her Math 254 lectures, and it has stuck with me ever since.
 \end{itemize}
 
